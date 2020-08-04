@@ -1,11 +1,18 @@
 {
     "name": "jsd",
-    "version": "0.0.0",
+    "version": "0.0.1",
+    "description": "Setzte die Projekt-Aufgabe Technology mit dem Design von der Lingulo Website auf der Basis von Node.js mit Express, cookie-parser, debug, http-errors, morgan, node-sass-middleware, twig und mysql um.",
+    "main": "./bin/www",
     "private": true,
-    "scripts": {
-        "start": "node ./bin/www",
-        "devstart": "nodemon ./bin/www",
-        "serverstart": "DEBUG=jsd:* npm run devstart"
+    "author": "Rudra Martin Grellmann",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cnochx/jsd/issues"
+    },
+    "homepage": "https://github.com/cnochx/jsd#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cnochx/jsd.git"
     },
     "dependencies": {
         "cookie-parser": "~1.4.4",
@@ -20,5 +27,10 @@
     },
     "devDependencies": {
         "nodemon": "^2.0.4"
+    },
+    "scripts": {
+        "start": "node ./bin/www",
+        "devstart": "nodemon ./bin/www",
+        "serverstart": "DEBUG=jsd:* npm run devstart"
     }
 }
