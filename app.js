@@ -1,5 +1,6 @@
 let createError = require('http-errors');
 let express = require('express');
+let favicon = require('serve-favicon');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
@@ -25,6 +26,8 @@ app.use(sassMiddleware({
     sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+// Integrate Favicon
+app.use(favicon(path.join(__dirname, 'public', '/favicon/favicon.ico')))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
