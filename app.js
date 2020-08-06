@@ -5,6 +5,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let sassMiddleware = require('node-sass-middleware');
+let robots = require('express-robots-txt');
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
@@ -28,6 +29,8 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 // Integrate Favicon
 app.use(favicon(path.join(__dirname, 'public', '/favicon/favicon.ico')))
+    // Integrate Robots.txt on Respond
+app.use(robots({ UserAgent: '*', Allow: '/' }))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
