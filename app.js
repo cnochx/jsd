@@ -35,6 +35,10 @@ app.use(robots({ UserAgent: '*', Allow: '/' }))
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// Integrate Sitemap
+const sitemapRouter = require("./routes/sitemap");
+app.use("/sitemap.xml", sitemapRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
