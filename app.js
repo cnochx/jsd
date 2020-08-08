@@ -7,6 +7,7 @@ let logger = require('morgan');
 let sassMiddleware = require('node-sass-middleware');
 let robots = require('express-robots-txt');
 
+// integrates sites
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
@@ -31,14 +32,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', '/favicon/favicon.ico')))
     // Integrate Robots.txt on Respond
 app.use(robots({ UserAgent: '*', Allow: '/' }))
-
+    // listen to sites
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // Integrate Sitemap
 const sitemapRouter = require("./routes/sitemap");
 app.use("/sitemap.xml", sitemapRouter);
-
+/**
+ * TODO: Better Error-Page-Handling
+ */
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
