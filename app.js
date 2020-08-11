@@ -21,12 +21,17 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(sassMiddleware({
+    /* Options */
     src: path.join(__dirname, 'public'),
     dest: path.join(__dirname, 'public'),
-    indentedSyntax: true, // true = .sass and false = .scss
-    sourceMap: true
+    indentedSyntax: false, // true = .sass and false = .scss
+    sourceMap: true,
+    debug: true,
 }));
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 // Integrate Favicon
 app.use(favicon(path.join(__dirname, 'public', '/favicon/favicon.ico')))
