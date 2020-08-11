@@ -1,10 +1,13 @@
 let createError = require('http-errors');
 let express = require('express');
+let favicon = require('serve-favicon');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let sassMiddleware = require('node-sass-middleware');
+let robots = require('express-robots-txt');
 
+// integrates sites
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
@@ -18,17 +21,32 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(sassMiddleware({
+    /* Options */
     src: path.join(__dirname, 'public'),
     dest: path.join(__dirname, 'public'),
-    indentedSyntax: true, // true = .sass and false = .scss
-    sourceMap: true
+    indentedSyntax: false, // true = .sass and false = .scss
+    sourceMap: true,
+    debug: true,
 }));
-app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use(express.static(path.join(__dirname, 'public')));
+// Integrate Favicon
+app.use(favicon(path.join(__dirname, 'public', '/favicon/favicon.ico')))
+    // Integrate Robots.txt on Respond
+app.use(robots({ UserAgent: '*', Allow: '/' }))
+    // listen to sites
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// Integrate Sitemap
+const sitemapRouter = require("./routes/sitemap");
+app.use("/sitemap.xml", sitemapRouter);
+/**
+ * TODO: Better Error-Page-Handling
+ */
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
