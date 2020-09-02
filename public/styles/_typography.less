@@ -1,0 +1,247 @@
+// Import Libraries
+@import 'lib/3L/3L';
+@import 'base';
+
+// Hind
+.get-font-face('Hind_Regular','hind_regular','../fonts/hind/regular/',400);
+.get-font-face('Hind_Medium','hind_medium','../fonts/hind/medium/',500);
+.get-font-face('Hind_Semibold','hind_semibold','../fonts/hind/semibold/',600);
+.get-font-face('Hind_Bold','hind_bold','../fonts/hind/bold/',700);
+
+// Mada
+.get-font-face('Mada_Regular','mada_regular','../fonts/mada/regular/',400);
+.get-font-face('Mada_Medium','mada_medium','../fonts/mada/medium/',500);
+.get-font-face('Mada_Semibold','mada_semibold','../fonts/mada/semibold/',600);
+.get-font-face('Mada_Bold','mada_bold','../fonts/mada/bold/',700);
+
+// Mada
+.get-font-face('Mali_Regular','mali_regular-400','../fonts/mali/regular/',400);
+.get-font-face('Mali_Medium','mali_medium-500','../fonts/mali/medium/',500);
+.get-font-face('Mali_Semibold','mali_semibold-600','../fonts/mali/semibold/',600);
+.get-font-face('Mali_Italic','mali_italic-400','../fonts/mali/italic/',400);
+.get-font-face('Mali_Medium_Italic','mali_medium-italic-500','../fonts/mali/medium_italic/',500);
+.get-font-face('Mali_Light','mali_light-300','../fonts/mali/light/',300);
+
+// font-family: Hind_Regular, Arial, sans-serif;
+// font-family: Mada_Regular, Arial, sans-serif;
+// font-family: Mali_Regular, Helvetica, sans-serif;
+
+/* ---------------------------------------------------- */
+
+body {
+    font-family: Hind_Regular, Arial, sans-serif;
+    font-weight: 400;
+    color: @color-default-font;
+    @media @xs-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-sm);
+    }
+    @media @md-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-md);
+    }
+    @media @dt-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-lg);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xl);
+    }
+}
+h1 {
+    font-family: Hind_Bold, Arial, sans-serif;
+    font-weight: 700;
+    color: @color-default-font;
+    @media @xs-device {
+        .set-font-size(@fs-default-14,@fs-default-14-unit,@fs-default-14-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-font-size(@fs-default-14,@fs-default-14-unit,@fs-default-14-ext,@formula-display-sm);
+    }
+    @media @md-device {
+        .set-font-size(@fs-default-14,@fs-default-14-unit,@fs-default-14-ext,@formula-display-md);
+    }
+    @media @dt-device {
+        .set-font-size(@fs-default-14,@fs-default-14-unit,@fs-default-14-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-14,@fs-default-14-unit,@fs-default-14-ext,@formula-display-lg);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-14,@fs-default-14-unit,@fs-default-14-ext,@formula-display-xl);
+    }
+    display: inline-block;
+}
+h2 {
+    font-family: Hind_Semibold, Arial, sans-serif;
+    font-weight: 600;
+    color: @color-default-font;
+    @media @xs-device {
+        .set-font-size(@fs-default-13,@fs-default-13-unit,@fs-default-13-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-font-size(@fs-default-13,@fs-default-13-unit,@fs-default-13-ext,@formula-display-sm);
+    }
+    @media @md-device {
+        .set-font-size(@fs-default-13,@fs-default-13-unit,@fs-default-13-ext,@formula-display-md);
+    }
+    @media @dt-device {
+        .set-font-size(@fs-default-13,@fs-default-13-unit,@fs-default-13-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-13,@fs-default-13-unit,@fs-default-13-ext,@formula-display-lg);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-13,@fs-default-13-unit,@fs-default-13-ext,@formula-display-xl);
+    }
+    display: inline-block;
+}
+h3 {
+    font-family: Hind_Semibold, Arial, sans-serif;
+    font-weight: 600;
+    color: @color-default-font;
+    @media @xs-device {
+        .set-font-size(@fs-default-12,@fs-default-12-unit,@fs-default-12-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-font-size(@fs-default-12,@fs-default-12-unit,@fs-default-12-ext,@formula-display-sm);
+    }
+    @media @md-device {
+        .set-font-size(@fs-default-12,@fs-default-12-unit,@fs-default-12-ext,@formula-display-md);
+    }
+    @media @dt-device {
+        .set-font-size(@fs-default-12,@fs-default-12-unit,@fs-default-12-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-12,@fs-default-12-unit,@fs-default-12-ext,@formula-display-lg);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-12,@fs-default-12-unit,@fs-default-12-ext,@formula-display-xl);
+    }
+    display: inline-block;
+}
+h4 {
+    font-family: Hind_Medium, Arial, sans-serif;
+    font-weight: 500;
+    color: @color-default-font;
+    @media @xs-device {
+        .set-font-size(@fs-default-11,@fs-default-11-unit,@fs-default-11-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-font-size(@fs-default-11,@fs-default-11-unit,@fs-default-11-ext,@formula-display-sm);
+    }
+    @media @md-device {
+        .set-font-size(@fs-default-11,@fs-default-11-unit,@fs-default-11-ext,@formula-display-md);
+    }
+    @media @dt-device {
+        .set-font-size(@fs-default-11,@fs-default-11-unit,@fs-default-11-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-11,@fs-default-11-unit,@fs-default-11-ext,@formula-display-lg);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-11,@fs-default-11-unit,@fs-default-11-ext,@formula-display-xl);
+    }
+    display: inline-block;
+}
+h5 {
+    font-family: Hind_Medium, Arial, sans-serif;
+    font-weight: 500;
+    color: @color-default-font;
+    @media @xs-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-sm);
+    }
+    @media @md-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-md);
+    }
+    @media @dt-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-lg);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-xl);
+    }
+    display: inline-block;
+}
+p {
+    font-family: Hind_Regular, Arial, sans-serif;
+    font-weight: 400;
+    color: @color-default-font;
+    @media @xs-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-sm);
+    }
+    @media @md-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-md);
+    }
+    @media @dt-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-lg);
+    }
+    @media @lg-device {
+        .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xl);
+    }
+    display: inline-block;
+}
+header#banner button * {
+    font-family: Mali_Medium, Helvetica, sans-serif!important;
+}
+header#banner nav {
+    font-family: Mada_Medium, Helvetica, sans-serif!important;
+    font-weight: 300;
+    @media @menu-device {
+        font-variant-caps: all-small-caps;
+        a:link { 
+            text-decoration: none; 
+            color: @color-default-font; 
+        }
+        a.active { 
+            background-color: @color-primary-3 }
+
+    }
+}
+nav#breadcrump {
+    ol {
+        li { 
+            font-family: "Hind_Semibold";
+            font-weight: 600;
+        }
+        li:first-child:before {
+            content: "";
+        }
+        li:before {
+            font-weight: 600;
+            content: "\203A";
+            @media @xs-device {
+                .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+            }
+            @media @sm-device {
+                .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-sm);
+            }
+            @media @md-device {
+                .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-md);
+            }
+            @media @dt-device {
+                .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-dt);
+            }
+            @media @lg-device {
+                .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-lg);
+            }
+            @media @lg-device {
+                .set-font-size(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xl);
+            }
+        }
+    }
+}
