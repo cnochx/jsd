@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'mada_semibold';
+    src: url('semibold/mada_semibold.eot');
+    src: url('semibold/mada_semibold.eot?#iefix') format('embedded-opentype'), url('semibold/mada_semibold.woff2') format('woff2'), url('semibold/mada_semibold.woff') format('woff'), url('semibold/mada_semibold.ttf') format('truetype'), url('semibold/mada_semibold.svg#madasemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mada_medium';
+    src: url('medium/mada_medium.eot');
+    src: url('medium/mada_medium.eot?#iefix') format('embedded-opentype'), url('medium/mada_medium.woff2') format('woff2'), url('medium/mada_medium.woff') format('woff'), url('medium/mada_medium.ttf') format('truetype'), url('medium/mada_medium.svg#madamedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mada_regular';
+    src: url('regular/mada_regular.eot');
+    src: url('regular/mada_regular.eot?#iefix') format('embedded-opentype'), url('regular/mada_regular.woff2') format('woff2'), url('regular/mada_regular.woff') format('woff'), url('regular/mada_regular.ttf') format('truetype'), url('regular/mada_regular.svg#madaregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mada_bold';
+    src: url('bold/mada_bold.eot');
+    src: url('bold/mada_bold.eot?#iefix') format('embedded-opentype'), url('bold/mada_bold.woff2') format('woff2'), url('bold/mada_bold.woff') format('woff'), url('bold/mada_bold.ttf') format('truetype'), url('bold/mada_bold.svg#madabold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
