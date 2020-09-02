@@ -1,0 +1,183 @@
+// Import Libraries
+@import 'lib/3L/3L';
+@import 'base';
+
+body {
+    background-color: @background-color;
+}
+
+header#banner {
+    border-top: 0.333em solid @color-primary-3;
+}
+nav#breadcrump {
+    background-color: @color-primary-3;
+    border-top: 0.072em solid @background-color;
+    border-bottom: 0.072em solid @background-color;
+    ol {
+        list-style: none;
+        padding-left: 0;
+        vertical-align: middle;
+        li { 
+            display: inline-block;
+            @media @xs-device {
+                .set-margin-left-s(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+            }
+            @media @sm-device {
+                .set-margin-left-s(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-sm);
+            }
+            @media @md-device {
+                .set-margin-left-s(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-md);
+            }
+            @media @dt-device {
+                .set-margin-left-s(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-dt);
+            }
+            @media @lg-device {
+                .set-margin-left-s(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-lg);
+            }
+            @media @lg-device {
+                .set-margin-left-s(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xl);
+            }
+        }
+        li:first-child {
+            @media @xs-device {
+                .set-margin-left(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+            }
+            @media @sm-device {
+                .set-margin-left(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-sm);
+            }
+            @media @md-device {
+                .set-margin-left(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-md);
+            }
+            @media @dt-device {
+                .set-margin-left(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-dt);
+            }
+            @media @lg-device {
+                .set-margin-left(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-lg);
+            }
+            @media @lg-device {
+                .set-margin-left(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xl);
+            }
+        }
+        li:before {
+            @media @xs-device {
+                .set-padding-right-xs(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+            }
+            @media @sm-device {
+                .set-padding-right-xs(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-sm);
+            }
+            @media @md-device {
+                .set-padding-right-xs(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-md);
+            }
+            @media @dt-device {
+                .set-padding-right-xs(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-dt);
+            }
+            @media @lg-device {
+                .set-padding-right-xs(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-lg);
+            }
+            @media @lg-device {
+                .set-padding-right-xs(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xl);
+            }
+        }
+    }
+}
+
+#slide_panel {
+    @media @xs-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-sm);
+    }
+    @media @md-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-md);
+    }
+    @media @dt-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-lg);
+    }
+    @media @lg-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xl);
+    }
+    article {
+        -webkit-border-radius: 10px;
+	    -moz-border-radius: 10px;
+	    border-radius: 10px;
+    }
+}
+#bottom {
+    background-color: @color-primary-3;
+    padding:0.133em 0px 0.133em 0px;
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+    @media @xs-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-sm);
+    }
+    @media @md-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-md);
+    }
+    @media @dt-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-lg);
+    }
+    @media @lg-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xl);
+    }
+    article {
+        background-color: @background-color;
+    }
+}
+article#node_rtcl,
+article#html_rtcl,
+article#css_rtcl,
+article#javascript_rtcl,
+article#php_rtcl,
+article#mysql_rtcl {
+
+    border-top: 0.333em solid @color-primary-3;
+    border-bottom: 0.333em solid @color-primary-3;
+    @media @xs-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+        .set-padding(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-sm);
+        .set-padding(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    @media @md-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-md);
+        .set-padding(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    @media @dt-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-dt);
+        .set-padding(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    @media @lg-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-lg);
+        .set-padding(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    @media @lg-device {
+        .set-margin(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xl);
+        .set-padding(@fs-default,@fs-default-unit,@fs-default-ext,@formula-display-xs);
+    }
+    img {
+        width: 98%;
+        margin: 0px 1% 0px 1%;
+        padding-bottom: 1%;
+    }
+}
+article {
+    // Stelle den cite in blockquote.bs_cite dar.
+    blockquote.bc_cite[cite]::after{content: "\2192 [" attr(cite) "] "; }
+}
+.jump {
+    display: grid;
+    justify-items: center;
+}

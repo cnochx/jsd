@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'hind_bold';
+    src: url('bold/hind_bold.eot');
+    src: url('bold/hind_bold.eot?#iefix') format('embedded-opentype'), url('bold/hind_bold.woff2') format('woff2'), url('bold/hind_bold.woff') format('woff'), url('bold/hind_bold.ttf') format('truetype'), url('bold/hind_bold.svg#hindbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'hind_semibold';
+    src: url('semibold/hind_semibold.eot');
+    src: url('semibold/hind_semibold.eot?#iefix') format('embedded-opentype'), url('semibold/hind_semibold.woff2') format('woff2'), url('semibold/hind_semibold.woff') format('woff'), url('semibold/hind_semibold.ttf') format('truetype'), url('semibold/hind_semibold.svg#hindsemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'hind_medium';
+    src: url('medium/hind_medium.eot');
+    src: url('medium/hind_medium.eot?#iefix') format('embedded-opentype'), url('medium/hind_medium.woff2') format('woff2'), url('medium/hind_medium.woff') format('woff'), url('medium/hind_medium.ttf') format('truetype'), url('medium/hind_medium.svg#hindmedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'hind_regular';
+    src: url('regular/hind_regular.eot');
+    src: url('regular/hind_regular.eot?#iefix') format('embedded-opentype'), url('regular/hind_regular.woff2') format('woff2'), url('regular/hind_regular.woff') format('woff'), url('regular/hind_regular.ttf') format('truetype'), url('regular/hind_regular.svg#hindregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

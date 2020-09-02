@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'mali_regular';
+    src: url('regular/mali_regular-400.eot');
+    src: url('regular/mali_regular-400.eot?#iefix') format('embedded-opentype'), url('regular/mali_regular-400.woff2') format('woff2'), url('regular/mali_regular-400.woff') format('woff'), url('regular/mali_regular-400.ttf') format('truetype'), url('regular/mali_regular-400.svg#maliregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mali_medium';
+    src: url('medium/mali_medium-500.eot');
+    src: url('medium/mali_medium-500.eot?#iefix') format('embedded-opentype'), url('medium/mali_medium-500.woff2') format('woff2'), url('medium/mali_medium-500.woff') format('woff'), url('medium/mali_medium-500.ttf') format('truetype'), url('medium/mali_medium-500.svg#malimedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mali_semibold';
+    src: url('semibold/mali_semibold-600.eot');
+    src: url('semibold/mali_semibold-600.eot?#iefix') format('embedded-opentype'), url('semibold/mali_semibold-600.woff2') format('woff2'), url('semibold/mali_semibold-600.woff') format('woff'), url('semibold/mali_semibold-600.ttf') format('truetype'), url('semibold/mali_semibold-600.svg#malisemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mali_italic';
+    src: url('italic/mali_italic-400.eot');
+    src: url('italic/mali_italic-400.eot?#iefix') format('embedded-opentype'), url('italic/mali_italic-400.woff2') format('woff2'), url('italic/mali_italic-400.woff') format('woff'), url('italic/mali_italic-400.ttf') format('truetype'), url('italic/mali_italic-400.svg#maliitalic') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mali_medium_italic';
+    src: url('medium_italic/mali_medium-italic-500.eot');
+    src: url('medium_italic/mali_medium-italic-500.eot?#iefix') format('embedded-opentype'), url('medium_italic/mali_medium-italic-500.woff2') format('woff2'), url('medium_italic/mali_medium-italic-500.woff') format('woff'), url('medium_italic/mali_medium-italic-500.ttf') format('truetype'), url('medium_italic/mali_medium-italic-500.svg#malimedium_italic') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mali_light';
+    src: url('light/mali_light-300.eot');
+    src: url('light/mali_light-300.eot?#iefix') format('embedded-opentype'), url('light/mali_light-300.woff2') format('woff2'), url('light/mali_light-300.woff') format('woff'), url('light/mali_light-300.ttf') format('truetype'), url('light/mali_light-300.svg#malilight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,164 @@
+// Import Libraries
+@import 'lib/3L/3L';
+@import 'base';
+
+//* Design Branding //
+
+header#banner button.button-branding {
+    text-decoration: none;
+    color: @color-default-font;
+    cursor: pointer;
+    z-index: 40;
+    border: none;
+    background-color: transparent;
+}
+
+header#banner ul.branding * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+@width: 323px + 3.5vw;
+@heigth: 80px + 1vw;
+
+header#banner ul.branding {
+    z-index: 42;
+    @media @xs-device {
+        display: grid;
+        grid-template-columns: 1.75vw 244px 80px;
+        grid-template-rows: 0.325em 19px 26px auto;
+    }
+
+    @media @xxs-device {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    @media @sm-device {
+        display: grid;
+        grid-template-columns: 1.75vw 244px 80px;
+        grid-template-rows: 0.325em 17px 21px auto;
+    }
+    @media @md-device {
+        display: grid;
+        grid-template-columns: 1.75vw 244px 80px;
+        grid-template-rows: 0.325em 17px 21px auto;
+    }
+    @media @dt-device {
+        display: grid;
+        grid-template-columns: 3vw 244px 80px;
+        grid-template-rows: 0.500em 20px 19px auto;
+    }
+    @media @lg-device {
+        display: grid;
+        grid-template-columns: 3vw 244px 80px;
+        grid-template-rows: 0.500em 20px 24px auto;
+    }
+    @media @xl-device {
+        display: grid;
+        grid-template-columns: 4em 244px 80px;
+        grid-template-rows: 0.500em 20px 24px auto;
+    }
+    @media only screen and (max-width: 22.750em) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 10px 10px;
+    }
+}
+
+header#banner ul.branding li.branding_name {
+    grid-area: 1 e("/") 1 e("/") 3 e("/") 3;
+    @media @xxs-device {
+        grid-area: 1 e("/") 1 e("/") 2 e("/") 2;
+    }
+    z-index: 48;
+    align-self: start;
+    justify-self: center;
+    display: grid;
+    justify-self: center;
+}
+
+header#banner ul.branding li.branding_name p {
+    color: @color-default-font;
+    @media @xs-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-xs);
+      }
+      @media @sm-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-sm);
+      }
+      @media @md-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-md);
+      }
+      @media @dt-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-dt);
+      }
+      @media @lg-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-lg);
+      }
+      @media @xl-device {
+        .set-font-size(@fs-default-01,@fs-default-01-unit,@fs-default-01-ext,@formula-display-xl);
+      }
+}
+
+header#banner ul.branding li.branding_logo {
+    grid-area: 2 e("/") 2 e("/") 5 e("/") 4;
+    @media @xxs-device {
+        display: none;
+        visibility:hidden;
+    }
+    z-index: 44;
+    align-self: start;
+    justify-items: center;
+    display: grid;
+    justify-self: end;
+}
+
+header#banner ul.branding li.branding_logo img {
+    @media @xxs-device {
+        display: none;
+        visibility:hidden;
+    }
+}
+
+header#banner ul.branding li.branding_slogan {
+    grid-area: 4 e("/") 1 e("/") 5 e("/") 3;
+    @media @xxs-device {
+        display: none;
+        visibility:hidden;
+    }
+    z-index: 46;
+    align-self: start;
+    justify-items: right;
+    text-align: right;
+    display: grid;
+    justify-self: end;
+} 
+
+header#banner ul.branding li.branding_slogan p {
+    color: @color-default-font;
+    @media @xxs-device {
+        display: none;
+        visibility:hidden;
+    }
+    @media @xs-device {
+      .set-font-size(@fs-default-02,@fs-default-02-unit,@fs-default-02-ext,@formula-display-xs);
+    }
+    @media @sm-device {
+      .set-font-size(@fs-default-02,@fs-default-02-unit,@fs-default-02-ext,@formula-display-sm);
+    }
+    @media @md-device {
+      .set-font-size(@fs-default-02,@fs-default-02-unit,@fs-default-02-ext,@formula-display-md);
+    }
+    @media @dt-device {
+      .set-font-size(@fs-default-02,@fs-default-02-unit,@fs-default-02-ext,@formula-display-dt);
+    }
+    @media @lg-device {
+      .set-font-size(@fs-default-02,@fs-default-02-unit,@fs-default-02-ext,@formula-display-lg);
+    }
+    @media @xl-device {
+      .set-font-size(@fs-default-02,@fs-default-02-unit,@fs-default-02-ext,@formula-display-xl);
+    }
+}

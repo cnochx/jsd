@@ -4,7 +4,7 @@ let favicon = require('serve-favicon');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-let sassMiddleware = require('node-sass-middleware');
+let lessMiddleware = require('less-middleware');
 let robots = require('express-robots-txt');
 
 // integrates sites
@@ -22,15 +22,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(sassMiddleware({
-    /* Options */
-    src: path.join(__dirname, 'public'),
-    dest: path.join(__dirname, 'public'),
-    indentedSyntax: false, // true = .sass and false = .scss
-    sourceMap: true,
-    debug: true,
-}));
-
+app.use(lessMiddleware(__dirname + '/public', ));
+app.use(lessMiddleware(
+    // source
+    __dirname + 'public/style',
+    // options
+    { dest: __dirname + 'public/stylesheets' }, // Destination
+    { debug: true }, { compress: 'auto' }
+));
 
 app.use(express.static(path.join(__dirname, 'public')));
 // Integrate Favicon

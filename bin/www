@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * * Berücksichtige .env und übergebe dessen Configuration in den Webserver
+ * Consider .env and pass its content
  */
 let dotenv = require('dotenv').config();
 // Teste dotenv nach Fehler
