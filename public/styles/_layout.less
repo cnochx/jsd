@@ -1,0 +1,49 @@
+// Import Libraries
+@import 'lib/3L/3L';
+@import 'base';
+
+header#banner {
+    // Define for small Device Different CSS_GRID
+    @media @hamburger-device {
+        display: grid;
+        grid-template-columns: 400px auto;
+        grid-template-rows: 150px;
+    }
+    @media @xxs-device {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+    @media @menu-device {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 1fr ;
+    }
+}
+header#banner button.button-branding {
+    // Define for small Device Different CSS_GRID
+    @media @hamburger-device {
+        grid-area: 1 e("/") 1 e("/") 2 e("/") 2;
+        justify-self: center;
+        align-self: center;
+    }
+    @media @menu-device {
+        grid-area: 1 e("/") 1 e("/") 2 e("/") 2;
+        justify-self: center;
+        align-self: center;
+    }
+}
+header#banner div#main-menu-wrapper {
+    // Define for small Device Different CSS_GRID
+    
+    @media @hamburger-device {
+        grid-area: 1 e("/") 2 e("/") 2 e("/") 3;
+        justify-self: end;
+        align-self: start;
+    }
+    @media @menu-device {
+        grid-area: 1 e("/") 2 e("/") 3 e("/") 3;
+        justify-self: start;
+        align-self: end;
+    }
+}
