@@ -1,0 +1,14 @@
+/* TEAM */
+Name: Rudra Martin Grellmann
+Site: martin@grellmann.eu
+Twitter: @call_rudra
+Location: Leipzig, Germany
+
+/* THANKS */
+Everyon who support me in Coding
+
+/* SITE */
+Last update: 2020/08/26
+Standards: HTML5, CSS3
+Components: Node.js, Express.js, Twig, Modernizr, jQuery.
+Software: Visual studio Code, Mamp Pro, Sublime Merge, Github  
