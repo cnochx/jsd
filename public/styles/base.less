@@ -1,0 +1,284 @@
+
+// * Set the Breakpoints for Mediaqueries //
+
+@xxs-max: 31.250;
+@xs-min: 20.000;
+@xs-max: 35.438;
+@sm-min: 35.500;
+@sm-max: 47.938;
+@md-min: 48.000;
+@md-max: 61.188;
+@dt-min: 61.250;
+@dt-max: 79.938;
+@lg-min: 80.000;
+@lg-max: 112.438;
+@xl-min: 112.500;
+@xl-max: 131.188;
+
+// * Set the Ratio //
+@ratio:1.333;
+
+// * Call Mediaqueries:
+// Usage;
+// @media @xs-device {…}
+// xxs-Small Devices bis 436px => 22.750em
+@xxs-max-unit: @{xxs-max}em;
+@xxs-device: ~'only screen and (max-width: @{xxs-max-unit})';
+// Super Small Devices von 320px => 20.000em bis 567px => 35.438em
+@xs-min-unit: @{xs-min}em;
+@xs-max-unit: @{xs-max}em;
+@xs-device: ~'only screen and (min-width: @{xs-min-unit}) and (max-width: @{xs-max-unit})';
+// Small Devices von 568px => 35.500em bis 767px => 35.438em
+@sm-min-unit: @{sm-min}em;
+@sm-max-unit: @{sm-max}em;
+@sm-device: ~'only screen and (min-width: @{sm-min-unit}) and (max-width: @{sm-max-unit})';
+// Medium Devices von 768px => 48.000em bis 979px => 61.188em
+@md-min-unit: @{md-min}em;
+@md-max-unit: @{md-max}em;
+@md-device: ~'only screen and (min-width: @{md-min-unit}) and (max-width: @{md-max-unit})';
+// Default Devices von 980px => 61.250em bis 1279px => 79.938em
+@dt-min-unit: @{dt-min}em;
+@dt-max-unit: @{dt-max}em;
+@dt-device: ~'only screen and (min-width: @{dt-min-unit}) and (max-width: @{dt-max-unit})';
+// Large Devices von 1280px => 80.000em bis 1799px => 112.438em
+@lg-min-unit: @{lg-min}em;
+@lg-max-unit: @{lg-max}em;
+@lg-device: ~'only screen and (min-width: @{lg-min-unit}) and (max-width: @{lg-max-unit})';
+// Super Large Devices von 1800px => 112.500em
+@xl-min-unit: @{xl-min}em;
+@xl-max-unit: @{xl-max}em;
+@xl-device: ~'only screen and (min-width: @{xl-min-unit})';
+// Hamburger /Menu Devices bis 979px => 61.188em
+@hamburger-device: ~'only screen and (max-width: @{md-max-unit})';
+// Menu Devices von 980px => 61.250em
+@menu-device: ~'only screen and (min-width: @{dt-min-unit})';
+
+// * set Formula for Molten-Leading and Fluid Typography
+// Parameter
+// @xs-min-unit: Min.Breakpointvalue with unit
+// @xs-min: Min.Breakpointvalue as Int.
+// @xs-max: Min.Breakpointvalue as Int.
+// Usage:
+// @formula-display-xs
+@formula-display-xs: (100vw - @{xs-min-unit}) / (@{xs-max} - @{xs-min});
+@formula-display-sm: ((100vw - @{sm-min-unit}) / (@{sm-max} - @{sm-min}));
+@formula-display-md: ((100vw - @{md-min-unit}) / (@{md-max} - @{md-min}));
+@formula-display-dt: ((100vw - @{dt-min-unit}) / (@{dt-max} - @{dt-min}));
+@formula-display-lg: ((100vw - @{lg-min-unit}) / (@{lg-max} - @{lg-min}));
+@formula-display-xl: ((100vw - @{xl-min-unit}) / (@{xl-max} - @{xl-min}));
+
+
+// * Fontsize for the Fluid-Typography
+//  Ratio=1.125 between the sizes,
+//  Ration=1.067 from the font-size the the extend font-size
+//  https://www.modularscale.com/?1,1.266&em&1.067
+
+@fs-default-05: 0.702;
+@fs-default-05-ext: 0.749;
+@fs-default-04: 0.79;
+@fs-default-04-ext: 0.843;
+@fs-default-03: 0.889;
+@fs-default-03-ext: 0.948;
+@fs-default-02: 1;
+@fs-default-02-ext: 1.067;
+@fs-default-01: 1.125;
+@fs-default-01-ext: 1.2;
+@fs-default: 1.266;
+@fs-default-ext: 1.35;
+@fs-default-11: 1.424;
+@fs-default-11-ext: 1.519;
+@fs-default-12: 1.602;
+@fs-default-12-ext: 1.709;
+@fs-default-13: 1.802;
+@fs-default-13-ext: 1.923;
+@fs-default-14: 2.027;
+@fs-default-14-ext: 2.163;
+@fs-default-15: 2.281;
+@fs-default-15-ext: 2.434;
+@fs-default-16: 2.566;
+@fs-default-16-ext: 3.153;
+
+@fs-default-05-unit: @{fs-default-05}em;
+@fs-default-05-ext-unit: @{fs-default-05-ext}em;
+@fs-default-04-unit: @{fs-default-04}em;
+@fs-default-04-ext-unit: @{fs-default-04-ext}em;
+@fs-default-03-unit: @{fs-default-03}em;
+@fs-default-03-ext-unit: @{fs-default-03-ext}em;
+@fs-default-02-unit: @{fs-default-02}em;
+@fs-default-02-ext-unit: @{fs-default-02-ext}em;
+@fs-default-01-unit: @{fs-default-01}em;
+@fs-default-01-ext-unit: @{fs-default-01-ext}em;
+@fs-default-unit: @{fs-default}em;
+@fs-default-ext-unit: @{fs-default-ext}em;
+@fs-default-11-unit: @{fs-default-11}em;
+@fs-default-11-ext-unit: @{fs-default-11-ext}em;
+@fs-default-12-unit: @{fs-default-12}em;
+@fs-default-12-ext-unit: @{fs-default-12-ext}em;
+@fs-default-13-unit: @{fs-default-13}em;
+@fs-default-13-ext-unit: @{fs-default-13-ext}em;
+@fs-default-14-unit: @{fs-default-14}em;
+@fs-default-14-ext-unit: @{fs-default-4-ext}em;
+@fs-default-15-unit: @{fs-default-15}em;
+@fs-default-15-ext-unit: @{fs-default-15-ext}em;
+@fs-default-16-unit: @{fs-default-16}em;
+@fs-default-16-ext-unit: @{fs-default-16-ext}em;
+
+
+// * get Font-face
+// 
+// include local fonts on you website.
+// Parameter:
+//  @name: 'Name of the Font'
+//  @filename: 'Filename of the Font'
+//  @path: '../path/to/the/font'
+//  @weight: Nunber of the Fontweight / 400 as default
+//  @style: Description of Normal / Normal as default
+// Usage:
+//  .get-font-face(@name,@path,@weight,@style)
+
+.get-font-face(@name,@filename,@path,@weight:400,@style:normal) {
+    @font-face {
+        font-family:@name;
+        font-style: @style;
+        font-weight: @weight;
+        font-display: swap;
+        src: 
+            // First check whether the font is already installed on the visitor's device
+            local('@name'),
+            url('@{path}@{filename}.woff2') format('woff2'),
+            url('@{path}@{filename}.woff') format('woff'),
+            url('@{path}@{filename}.eot') format('embedded-opentype'),
+            url('@{path}@{filename}.eot?#iefix') format('embedded-opentype'),
+            url('@{path}@{filename}.ttf') format('truetype');
+    }
+}
+
+// * Set the font-size and line-height.
+//  Parameter:
+//  @size-min: Put normal Fontsize, it's the minimum Fontsize
+//  @size-min-unit: Put normal Fontsize with the unit
+//  @size-max: Put the extend Fontsize, it's the Maximum Fontsize
+//  @device-min: Put the minimum Breakpoint for the Mediaqueries around the font-size and line-height
+//  @device-min-unit: Put the the minimum Breakpoint with the unit.
+//  @device-max: Put the maximum Breakpoint for the Mediaqueries around the font-size and line-height
+//  @device-max-unit: Put the the minimum Breakpoint with the unit.
+//  Usage:
+//  .set-font-size(@size-min,@size-min-unit,@size-max,@device-min,@device-min-unit,@device-max)
+
+.set-font-size(@size-min,@size-min-unit,@size-max,@formula) {
+    // return font-size and line-heigt i
+    font-size: calc(@size-min-unit + (@size-max - @size-min) * @formula);
+    line-height: calc(@size-min-unit + (@size-max - @size-min) * @formula);
+}
+.set-margin-left(@size-min,@size-min-unit,@size-max,@formula) {
+    // return font-size and line-heigt i
+    margin-left: calc(@size-min-unit + (@size-max - @size-min) * @formula);
+}
+.set-margin-left-s(@size-min,@size-min-unit,@size-max,@formula) {
+    // return font-size and line-heigt i
+    margin-left: calc((@size-min-unit + (@size-max - @size-min) * @formula) / 2);
+}
+.set-padding-right-xs(@size-min,@size-min-unit,@size-max,@formula) {
+    // return font-size and line-heigt i
+    padding-right: calc((@size-min-unit + (@size-max - @size-min) * @formula) / 2);
+}
+.set-margin(@size-min,@size-min-unit,@size-max,@formula) {
+    // return font-size and line-heigt i
+    margin: calc(@size-min-unit + (@size-max - @size-min) * @formula);
+}
+.set-padding(@size-min,@size-min-unit,@size-max,@formula) {
+    // return font-size and line-heigt i
+    padding: calc(@size-min-unit + (@size-max - @size-min) * @formula);
+}
+// * Responsive Dimensions
+.get-width(@width,@ratio,@formula) {
+    width: calc(@width * @ratio * @formula);
+}
+.get-heigth(@height,@ratio,@formula) {
+    height: calc(@height + @ratio * @formula);
+}
+
+// * Color
+// Colorpalette: https://paletton.com/#uid=70a0-0kqFsCh6vflIt2u1pmxAmo 
+
+// As hex codes 
+@color-default-font: #02101B;
+@rgba-default-font: rgba(2, 16, 27,1);
+@background-color: #ebe8de;
+@rgba-background: rgba(235,232,222,1);
+@rgba-overlay: rgba(235,232,222,0.4);
+
+
+@color-primary-0: #E44E26;	// Main Primary color 
+@color-primary-1: #F99074;
+@color-primary-2: #E76B4A;
+@color-primary-3: #CA340C;
+@color-primary-4: #B22500;
+
+@color-secondary-1-0: #E49426;	// Main Secondary color (1) 
+@color-secondary-1-1: #F9C174;
+@color-secondary-1-2: #E7A54A;
+@color-secondary-1-3: #CA7A0C;
+@color-secondary-1-4: #B26700;
+
+@color-secondary-2-0: #90D323;	// Main Secondary color (1) 
+@color-secondary-2-1: #B7E66B;
+@color-secondary-2-2: #9ED645;
+@color-secondary-2-3: #78BB0C;
+@color-secondary-2-4: #66A500;
+
+@color-secondary-3-0: #BD1F6D;	// Main Secondary color (2) 
+@color-secondary-3-1: #CE6096;
+@color-secondary-3-2: #C03E7D;
+@color-secondary-3-3: #A70A57;
+@color-secondary-3-4: #940048;
+
+@color-secondary-4-0: #215F93;	// Main Secondary color (2) 
+@color-secondary-4-1: #517CA1;
+@color-secondary-4-2: #376A95;
+@color-secondary-4-3: #104F82;
+@color-secondary-4-4: #074273;
+
+@color-complement-0: #1BA356;	// Main Complement color 
+@color-complement-1: #53B27C;
+@color-complement-2: #35A566;
+@color-complement-3: #099044;
+@color-complement-4: #007F37;
+
+// As RGBa codes
+
+@rgba-primary-0: rgba(228, 78, 38,1);	// Main Primary color 
+@rgba-primary-1: rgba(249,144,116,1);
+@rgba-primary-2: rgba(231,107, 74,1);
+@rgba-primary-3: rgba(202, 52, 12,1);
+@rgba-primary-4: rgba(178, 37,  0,1);
+
+@rgba-secondary-1-0: rgba(228,148, 38,1);	// Main Secondary color (1) 
+@rgba-secondary-1-1: rgba(249,193,116,1);
+@rgba-secondary-1-2: rgba(231,165, 74,1);
+@rgba-secondary-1-3: rgba(202,122, 12,1);
+@rgba-secondary-1-4: rgba(178,103,  0,1);
+
+@rgba-secondary-2-0: rgba(144,211, 35,1);	// Main Secondary color (1) 
+@rgba-secondary-2-1: rgba(183,230,107,1);
+@rgba-secondary-2-2: rgba(158,214, 69,1);
+@rgba-secondary-2-3: rgba(120,187, 12,1);
+@rgba-secondary-2-4: rgba(102,165,  0,1);
+
+@rgba-secondary-3-0: rgba(189, 31,109,1);	// Main Secondary color (2) 
+@rgba-secondary-3-1: rgba(206, 96,150,1);
+@rgba-secondary-3-2: rgba(192, 62,125,1);
+@rgba-secondary-3-3: rgba(167, 10, 87,1);
+@rgba-secondary-3-4: rgba(148,  0, 72,1);
+
+@rgba-secondary-4-0: rgba( 33, 95,147,1);	// Main Secondary color (2) 
+@rgba-secondary-4-1: rgba( 81,124,161,1);
+@rgba-secondary-4-2: rgba( 55,106,149,1);
+@rgba-secondary-4-3: rgba( 16, 79,130,1);
+@rgba-secondary-4-4: rgba(  7, 66,115,1);
+
+@rgba-complement-0: rgba( 27,163, 86,1);	// Main Complement color 
+@rgba-complement-1: rgba( 83,178,124,1);
+@rgba-complement-2: rgba( 53,165,102,1);
+@rgba-complement-3: rgba(  9,144, 68,1);
+@rgba-complement-4: rgba(  0,127, 55,1);
