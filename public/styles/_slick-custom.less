@@ -1,0 +1,156 @@
+// Import Libraries
+@import 'lib/3L/3L';
+@import 'base';
+
+// Overlay-Effect
+#slideshow article {
+    // Position für Overlay-Effekt
+    position: absolute;
+    height: auto; 
+    width: 74%;
+    // Design
+    margin: 3% 13% 12% 13%;
+}
+#slideshow article {
+    // Definiere Layer, Middle. Between .slideshow-carousel and .slick-prev, .slick-next and .slick-dots
+    z-index: 54;
+}
+#slider div {
+    // Definiere Layer, Middle. Between .slideshow-carousel and .slick-prev, .slick-next and .slick-dots
+    z-index: 54;
+}
+// Overlay-Content for Slideshow/ Carousel
+#slideshow article.teaser {
+    .hidden();
+}
+
+#slideshow article.toggle_rtcl {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    .toggle_hdr {
+        order: 1;
+        flex: 0 1 auto;
+        align-self: flex-start;
+        
+        background-color:@rgba-overlay;
+        border: none;
+        .border-top-left-radius (40%);
+        .border-top-right-radius (10%);
+        .border-bottom-right-radius (40%);
+        .border-bottom-left-radius (10%);
+        padding: 0px 2.500em 0px 2.500em;
+        // Definiere Layer, Middle. Between .slideshow-carousel and .slick-prev, .slick-next and .slick-dots
+        z-index: 54;
+    }
+    .toggle_img {
+        order: 0;
+        flex: 0 1 166px;
+        align-self: center;
+        // Definiere Layer, Middle. Between .slideshow-carousel and .slick-prev, .slick-next and .slick-dots
+        z-index: 54;
+    }
+}
+
+// Design the Top-Slideshow/ Carousel
+.slideshow-carousel,
+.slider-section {
+    // Create CSS-Grid and the Position of items
+    display: grid;
+    grid-template-columns: 12% 1fr 166px 12%;
+    grid-template-rows: 3% 1fr 12%;
+    justify-items: center;
+    align-items: center;
+    // Definiere Layer, Background
+    z-index: 50;
+    // Position für Overlay-Effekt
+    position: relative;
+    height: 245px; width: auto;
+
+    .slick-prev {
+        // Guarantee the Position and Display in CSS-Grid
+        grid-area: 1 e("/") 1 e("/") 3 e("/") 2;
+        align-self: center;
+        justify-self: center;
+        // Definiere Layer, Top. Same Position as .slick-next and .slick-dots
+        z-index: 58;
+    }
+    .slick-list {
+        // Guarantee the Position and Display in CSS-Grid
+        grid-area: 1 e("/") 1 e("/") 4 e("/") 5;
+        justify-self: stretch;
+        align-self: stretch;
+        // Definiere Layer, Middle. Between .slideshow-carousel and .slick-prev, .slick-next and .slick-dots
+        z-index: 52;
+        img {
+            height: 245px;
+            width: 100%;
+        }
+    }
+    .slick-next {
+        // Guarantee the Position and Display in CSS-Grid
+        grid-area: 1 e("/") 4 e("/") 3 e("/") 5;
+        align-self: center;
+        justify-self: center;
+        // Definiere Layer, Top. Same Position as .slick-prev and .slick-dots
+        z-index: 58;
+    }
+    .slick-dots {
+        // Guarantee the Position and Display in CSS-Grid
+        grid-area: 3 e("/") 2 e("/") 4 e("/") 4;
+        align-self: center;
+        justify-self: center;
+        // Definiere Layer, Top. Same Position as .slick-prev and .slick-next
+        z-index: 58
+    }
+    // Design the Reward/ Forward Button
+    .slick-prev,
+    .slick-next {
+        width: 44px;
+        height: 44px;
+        border: none;
+        .round-corners(60%);
+        background: @rgba-secondary-2-1;
+        .opacity (60);
+        cursor: pointer;
+        .translateY (-50%);
+        z-index: 59;
+    }
+}
+// Design the Pager
+ul.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+    li {
+        display: inline-block;
+        overflow: hidden;
+        z-index: 54;
+        margin: 0 0.25rem;
+    }
+    // all Pager-Button
+    li button {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        padding: 0;
+        border: none;
+        .round-corners(60%);
+        background: @rgba-secondary-2-1;
+        .opacity (60);
+        text-indent: -9999px;
+        // Definiere Layer, absolutely Top.
+        z-index: 59;
+    }
+    // activ Pager-Button
+    li.slick-active button {
+        background-color: @rgba-primary-1;
+        .opacity (80);
+    }
+}
