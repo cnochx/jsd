@@ -87,8 +87,6 @@ function Toggle() {
                     $('.rtcl_bottom').appendTo("#bottom");
                 }
             }
-
-
         }
     }
 }
