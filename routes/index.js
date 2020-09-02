@@ -175,6 +175,9 @@ pool.getConnection(async(err, connection) => {
     } catch {
         if (err) throw err;
     }
+    pool.end(function(err) {
+        // all connections in the pool have ended
+    });
 })
 
 // Conatain the Callout for the Router
